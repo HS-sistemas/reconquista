@@ -1,0 +1,10 @@
+C:\Users\Samir\source\repos\Reconquista\Reconquista\bin\Debug\Reconquista.exe.config
+C:\Users\Samir\source\repos\Reconquista\Reconquista\bin\Debug\Reconquista.exe
+C:\Users\Samir\source\repos\Reconquista\Reconquista\bin\Debug\Reconquista.pdb
+C:\Users\Samir\source\repos\Reconquista\Reconquista\obj\Debug\Reconquista.csprojAssemblyReference.cache
+C:\Users\Samir\source\repos\Reconquista\Reconquista\obj\Debug\Reconquista.frmPrincipal.resources
+C:\Users\Samir\source\repos\Reconquista\Reconquista\obj\Debug\Reconquista.Properties.Resources.resources
+C:\Users\Samir\source\repos\Reconquista\Reconquista\obj\Debug\Reconquista.csproj.GenerateResource.cache
+C:\Users\Samir\source\repos\Reconquista\Reconquista\obj\Debug\Reconquista.csproj.CoreCompileInputs.cache
+C:\Users\Samir\source\repos\Reconquista\Reconquista\obj\Debug\Reconquista.exe
+C:\Users\Samir\source\repos\Reconquista\Reconquista\obj\Debug\Reconquista.pdb
