@@ -21,5 +21,19 @@ namespace Reconquista
         {
             Application.Exit();
         }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSobre form = new FrmSobre();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void cadastroDeClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCadastroCliente form = new FrmCadastroCliente();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
