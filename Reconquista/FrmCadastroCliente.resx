@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="clienteBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>110, 17</value>
+  </metadata>
+  <metadata name="cliente_BemBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>912, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAttBemSegurado.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMlSURBVFhH5ZdJaBNRGMdHRcGllcyStlAvgqAiLiAqLqD2
+        YQUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAMlSURBVFhH5ZdJaBNRGMdHRcGllcyStlAvgqAiLiAqLqD2
         KB5EQQUP6sWDClZQBMGBzntJtbigKJQ2M29SeuigoOhND1rqUbDFq1LQgyuxbrR1qf9v8g3WkNommfTi
         Hx6TfMv7fW+bvGixyrZnmq7cYigZGJ58Zyr501TiI9oD03f2NvZcnMuRVVAQzLJU6pDpyVcAjxU2FPQZ
         vmsN3bbJGTEKcIz6SH60AHripaHEVUCPApoyPNEP2y9qsHfWZdvmc2YMKoAD8NRynY3a2NgMjtD0rtZG
@@ -141,7 +147,7 @@
   <data name="btnDeleteBemSegurado.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHxSURBVFhHzVfNSsNAEA7qU/gGelePpbcmVW/FpkXwAcQX
+        YQUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAHxSURBVFhHzVfNSsNAEA7qU/gGelePpbcmVW/FpkXwAcQX
         8NCj+AQFPerRdxB9Bk0aEAVvFfGnoJe0rvNNNxrrmCalZRz4YJuZ+b7J7nay6+Sx81JpIdrylgLf3Q0a
         3lnY8CIa9wgDix4/Ix9iEIscmz65mVptPvKrq4HvtYn8jkRighmDGLHIQS44LF0xC+ubi6HvHRLZgyCS
         C5xLHOCytPms06yshL57SQQfEnERMAdxgdPSZxsllQlRmmRKAGfZyshm17szkjg1gBsaVu6nDdfcvZAS
@@ -156,7 +162,7 @@
   <data name="btnAddBemSegurado.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHlSURBVFhHzVe7TgJBFN2oX+EfaK+WyC6NH0CizJhob2u9
+        YQUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAHlSURBVFhHzVe7TgJBFN2oX+EfaK+WyC6NH0CizJhob2u9
         NZ0dlT9ACLs+OolGooU/YKRREwojpYkVKt4zO0sU7izLLjqc5MCGe+ecuzPDPJw0KFwVlkrN3RX3RB64
         oWgQO14g3uj7E9TPHRWjHOSijW6eHeV6edFt7qyTQc0LxZMXyL4XykEiVQ5yRQ1toaHlpkMp3F4moSq9
         VY81SsGorahCS8umg3cq1kigTW/zNSo6NSONNjS1fDLcsFLEeI4J5WQ0RypFbcMjGm/5wAnMhKQND233
@@ -167,10 +173,13 @@
         SmNYPZbHsHoxiaHmBE0Wqvz/r2YxrF5Of+LvrueO8w1Rh96uY3jl8wAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="bemBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>608, 17</value>
+  </metadata>
   <data name="btnDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANdSURBVDhPjZNrTJNnGIZfk8WQJSYYEhNcshmWxeP+uNkO
+        YQUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAANdSURBVDhPjZNrTJNnGIZfk8WQJSYYEhNcshmWxeP+uNkO
         4xYzJCIOjyxbpRwWUKpFbLV2wqD0gPiViMGOo6yuSIkUsWJLlXZsgge6qUAVtK0NtKAp1I8MpRwKE+59
         4PdnWbLsSu5fz3PdP568L2EIE63nHmvaxvO2bk+eKONsb49f+eHmhcH/4shHn2Q6suSvZ8sbMHOUgv9r
         MbSc+Afrwpa/z678N9rNCQ/HVVV4U2PEnPgsXvGkuLP1wDx/5eo0ZvwOk3A2YUyWMPknuuivPIGUHAQF
@@ -191,7 +200,7 @@
   <data name="btnUpdate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANdSURBVDhPjZNrTJNnGIZfk8WQJSYYEhNcshmWxeP+uNkO
+        YQUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAANdSURBVDhPjZNrTJNnGIZfk8WQJSYYEhNcshmWxeP+uNkO
         4xYzJCIOjyxbpRwWUKpFbLV2wqD0gPiViMGOo6yuSIkUsWJLlXZsgge6qUAVtK0NtKAp1I8MpRwKE+59
         4PdnWbLsSu5fz3PdP568L2EIE63nHmvaxvO2bk+eKONsb49f+eHmhcH/4shHn2Q6suSvZ8sbMHOUgv9r
         MbSc+Afrwpa/z678N9rNCQ/HVVV4U2PEnPgsXvGkuLP1wDx/5eo0ZvwOk3A2YUyWMPknuuivPIGUHAQF
@@ -212,7 +221,7 @@
   <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAOJSURBVDhPhZNtTFt1FMYvxhCy7BrHB0OWDElMkM35QU2L
+        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAAOJSURBVDhPhZNtTFt1FMYvxhCy7BrHB0OWDElMkM35QU2L
         6NzMJhmDgLqxrUxaMAOBAaMw6AZbS9uL0DJZtiqMF6srL46yAbalDa2obE5qcEC1zLZroAVNobtEhPJS
         cPB42y0m+6JP8uR8OOf5Jefk/ycYhfFfer2oOz7NZTzIXapnJwwmbn/hDWtSdqD3/zoV/VqOpVC8sF7f
         ibVCGTxHi6FkJ/784tZtkextEY+n/kPKN1PuLlKNeNjSg43iT/BXmgB33j6xydu+M5NpP8342ccOYxzC
@@ -230,6 +239,27 @@
         NchEy00Xxf76WgldIxWaTxfxqQMHk3YzcyFhW7YS/wBL7hjihT3jEQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="dataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="clienteBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>110, 17</value>
+  </metadata>
+  <metadata name="clienteTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>276, 17</value>
+  </metadata>
+  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>437, 17</value>
+  </metadata>
+  <metadata name="bemTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>763, 17</value>
+  </metadata>
+  <metadata name="cliente_BemTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="bemBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>608, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAUAEBAAAAEAIABoBAAAVgAAACAgAAABACAAqBAAAL4EAAAwMAAAAQAgAKglAABmFQAAQEAAAAEA

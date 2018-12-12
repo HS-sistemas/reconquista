@@ -81,6 +81,23 @@ namespace Reconquista
             txtBemSegurado.Enabled = true;
             mtxtPlaca.Enabled = true;
             rtxtObs.Enabled = true;
+            dtpDtaVigencia.Enabled = true;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmCadastroCliente_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'dataSet.Cliente_Bem'. Você pode movê-la ou removê-la conforme necessário.
+            this.cliente_BemTableAdapter.Fill(this.dataSet.Cliente_Bem);
+            // TODO: esta linha de código carrega dados na tabela 'dataSet.Bem'. Você pode movê-la ou removê-la conforme necessário.
+            this.bemTableAdapter.Fill(this.dataSet.Bem);
+            // TODO: esta linha de código carrega dados na tabela 'dataSet.Cliente'. Você pode movê-la ou removê-la conforme necessário.
+            this.clienteTableAdapter.Fill(this.dataSet.Cliente);
+
         }
     }
 }

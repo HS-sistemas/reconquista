@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastroCliente));
             this.pnlDadosPessoais = new System.Windows.Forms.Panel();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -48,6 +49,10 @@
             this.lblCodCli = new System.Windows.Forms.Label();
             this.lblDadosPessoais = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblDtaVigencia = new System.Windows.Forms.Label();
+            this.dtpDtaVigencia = new System.Windows.Forms.DateTimePicker();
+            this.btnAttBemSegurado = new System.Windows.Forms.Button();
+            this.btnDeleteBemSegurado = new System.Windows.Forms.Button();
             this.btnAddBemSegurado = new System.Windows.Forms.Button();
             this.lblCodBemSegurado = new System.Windows.Forms.Label();
             this.txtCodBemSegurado = new System.Windows.Forms.TextBox();
@@ -63,12 +68,22 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnDeleteBemSegurado = new System.Windows.Forms.Button();
-            this.btnAttBemSegurado = new System.Windows.Forms.Button();
+            this.dataSet = new Reconquista.DataSet();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clienteTableAdapter = new Reconquista.DataSetTableAdapters.ClienteTableAdapter();
+            this.tableAdapterManager = new Reconquista.DataSetTableAdapters.TableAdapterManager();
+            this.bemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bemTableAdapter = new Reconquista.DataSetTableAdapters.BemTableAdapter();
+            this.cliente_BemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cliente_BemTableAdapter = new Reconquista.DataSetTableAdapters.Cliente_BemTableAdapter();
             this.pnlDadosPessoais.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cliente_BemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDadosPessoais
@@ -99,6 +114,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Email_cli", true));
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(442, 69);
             this.txtEmail.Name = "txtEmail";
@@ -177,6 +193,7 @@
             // 
             // mtxtCpfCnpjCli
             // 
+            this.mtxtCpfCnpjCli.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "CPF_CNPJ_cli", true));
             this.mtxtCpfCnpjCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtxtCpfCnpjCli.Location = new System.Drawing.Point(88, 69);
             this.mtxtCpfCnpjCli.Name = "mtxtCpfCnpjCli";
@@ -195,6 +212,7 @@
             // 
             // mtxtRGIECli
             // 
+            this.mtxtRGIECli.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "RG_IE_cli", true));
             this.mtxtRGIECli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtxtRGIECli.Location = new System.Drawing.Point(3, 69);
             this.mtxtRGIECli.Name = "mtxtRGIECli";
@@ -223,6 +241,7 @@
             // 
             // txtNomeCli
             // 
+            this.txtNomeCli.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Nome_cli", true));
             this.txtNomeCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeCli.Location = new System.Drawing.Point(88, 26);
             this.txtNomeCli.Name = "txtNomeCli";
@@ -231,6 +250,7 @@
             // 
             // txtCodCli
             // 
+            this.txtCodCli.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "ID_cli", true));
             this.txtCodCli.Enabled = false;
             this.txtCodCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodCli.Location = new System.Drawing.Point(3, 26);
@@ -261,6 +281,8 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lblDtaVigencia);
+            this.panel2.Controls.Add(this.dtpDtaVigencia);
             this.panel2.Controls.Add(this.btnAttBemSegurado);
             this.panel2.Controls.Add(this.btnDeleteBemSegurado);
             this.panel2.Controls.Add(this.btnAddBemSegurado);
@@ -278,11 +300,48 @@
             this.panel2.Size = new System.Drawing.Size(819, 204);
             this.panel2.TabIndex = 22;
             // 
+            // lblDtaVigencia
+            // 
+            this.lblDtaVigencia.AutoSize = true;
+            this.lblDtaVigencia.Location = new System.Drawing.Point(603, 5);
+            this.lblDtaVigencia.Name = "lblDtaVigencia";
+            this.lblDtaVigencia.Size = new System.Drawing.Size(116, 17);
+            this.lblDtaVigencia.TabIndex = 27;
+            this.lblDtaVigencia.Text = "Data de Vigência";
+            // 
+            // dtpDtaVigencia
+            // 
+            this.dtpDtaVigencia.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.cliente_BemBindingSource, "Dta_vigencia", true));
+            this.dtpDtaVigencia.Enabled = false;
+            this.dtpDtaVigencia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDtaVigencia.Location = new System.Drawing.Point(606, 25);
+            this.dtpDtaVigencia.Name = "dtpDtaVigencia";
+            this.dtpDtaVigencia.Size = new System.Drawing.Size(101, 23);
+            this.dtpDtaVigencia.TabIndex = 26;
+            // 
+            // btnAttBemSegurado
+            // 
+            this.btnAttBemSegurado.Image = ((System.Drawing.Image)(resources.GetObject("btnAttBemSegurado.Image")));
+            this.btnAttBemSegurado.Location = new System.Drawing.Point(725, 150);
+            this.btnAttBemSegurado.Name = "btnAttBemSegurado";
+            this.btnAttBemSegurado.Size = new System.Drawing.Size(89, 44);
+            this.btnAttBemSegurado.TabIndex = 25;
+            this.btnAttBemSegurado.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteBemSegurado
+            // 
+            this.btnDeleteBemSegurado.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteBemSegurado.Image")));
+            this.btnDeleteBemSegurado.Location = new System.Drawing.Point(725, 80);
+            this.btnDeleteBemSegurado.Name = "btnDeleteBemSegurado";
+            this.btnDeleteBemSegurado.Size = new System.Drawing.Size(89, 45);
+            this.btnDeleteBemSegurado.TabIndex = 24;
+            this.btnDeleteBemSegurado.UseVisualStyleBackColor = true;
+            // 
             // btnAddBemSegurado
             // 
             this.btnAddBemSegurado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddBemSegurado.Image = ((System.Drawing.Image)(resources.GetObject("btnAddBemSegurado.Image")));
-            this.btnAddBemSegurado.Location = new System.Drawing.Point(510, 15);
+            this.btnAddBemSegurado.Location = new System.Drawing.Point(725, 14);
             this.btnAddBemSegurado.Name = "btnAddBemSegurado";
             this.btnAddBemSegurado.Size = new System.Drawing.Size(89, 45);
             this.btnAddBemSegurado.TabIndex = 23;
@@ -301,6 +360,7 @@
             // 
             // txtCodBemSegurado
             // 
+            this.txtCodBemSegurado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bemBindingSource, "ID_bem", true));
             this.txtCodBemSegurado.Enabled = false;
             this.txtCodBemSegurado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodBemSegurado.Location = new System.Drawing.Point(6, 25);
@@ -320,19 +380,21 @@
             // 
             // rtxtObs
             // 
+            this.rtxtObs.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bemBindingSource, "Obs_bem", true));
             this.rtxtObs.Enabled = false;
             this.rtxtObs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtxtObs.Location = new System.Drawing.Point(3, 80);
             this.rtxtObs.Name = "rtxtObs";
-            this.rtxtObs.Size = new System.Drawing.Size(719, 114);
+            this.rtxtObs.Size = new System.Drawing.Size(716, 114);
             this.rtxtObs.TabIndex = 19;
             this.rtxtObs.Text = "";
             // 
             // mtxtPlaca
             // 
+            this.mtxtPlaca.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bemBindingSource, "Placa_bem", true));
             this.mtxtPlaca.Enabled = false;
             this.mtxtPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtPlaca.Location = new System.Drawing.Point(445, 25);
+            this.mtxtPlaca.Location = new System.Drawing.Point(541, 25);
             this.mtxtPlaca.Mask = "AAA-0000";
             this.mtxtPlaca.Name = "mtxtPlaca";
             this.mtxtPlaca.Size = new System.Drawing.Size(59, 23);
@@ -342,7 +404,7 @@
             // 
             this.lblPlaca.AutoSize = true;
             this.lblPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlaca.Location = new System.Drawing.Point(445, 5);
+            this.lblPlaca.Location = new System.Drawing.Point(541, 5);
             this.lblPlaca.Name = "lblPlaca";
             this.lblPlaca.Size = new System.Drawing.Size(43, 17);
             this.lblPlaca.TabIndex = 2;
@@ -350,11 +412,12 @@
             // 
             // txtBemSegurado
             // 
+            this.txtBemSegurado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bemBindingSource, "Nome_bem", true));
             this.txtBemSegurado.Enabled = false;
             this.txtBemSegurado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBemSegurado.Location = new System.Drawing.Point(88, 25);
             this.txtBemSegurado.Name = "txtBemSegurado";
-            this.txtBemSegurado.Size = new System.Drawing.Size(351, 23);
+            this.txtBemSegurado.Size = new System.Drawing.Size(447, 23);
             this.txtBemSegurado.TabIndex = 1;
             // 
             // lblBemSegurado
@@ -427,6 +490,7 @@
             this.btnSave.Text = "Salvar";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dataGridView1
             // 
@@ -436,23 +500,47 @@
             this.dataGridView1.Size = new System.Drawing.Size(819, 225);
             this.dataGridView1.TabIndex = 24;
             // 
-            // btnDeleteBemSegurado
+            // dataSet
             // 
-            this.btnDeleteBemSegurado.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteBemSegurado.Image")));
-            this.btnDeleteBemSegurado.Location = new System.Drawing.Point(605, 14);
-            this.btnDeleteBemSegurado.Name = "btnDeleteBemSegurado";
-            this.btnDeleteBemSegurado.Size = new System.Drawing.Size(89, 45);
-            this.btnDeleteBemSegurado.TabIndex = 24;
-            this.btnDeleteBemSegurado.UseVisualStyleBackColor = true;
+            this.dataSet.DataSetName = "DataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btnAttBemSegurado
+            // clienteBindingSource
             // 
-            this.btnAttBemSegurado.Image = ((System.Drawing.Image)(resources.GetObject("btnAttBemSegurado.Image")));
-            this.btnAttBemSegurado.Location = new System.Drawing.Point(700, 14);
-            this.btnAttBemSegurado.Name = "btnAttBemSegurado";
-            this.btnAttBemSegurado.Size = new System.Drawing.Size(89, 44);
-            this.btnAttBemSegurado.TabIndex = 25;
-            this.btnAttBemSegurado.UseVisualStyleBackColor = true;
+            this.clienteBindingSource.DataMember = "Cliente";
+            this.clienteBindingSource.DataSource = this.dataSet;
+            // 
+            // clienteTableAdapter
+            // 
+            this.clienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AnexoTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BemTableAdapter = this.bemTableAdapter;
+            this.tableAdapterManager.Cliente_BemTableAdapter = this.cliente_BemTableAdapter;
+            this.tableAdapterManager.ClienteTableAdapter = this.clienteTableAdapter;
+            this.tableAdapterManager.TelefoneTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Reconquista.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // bemBindingSource
+            // 
+            this.bemBindingSource.DataMember = "Bem";
+            this.bemBindingSource.DataSource = this.dataSet;
+            // 
+            // bemTableAdapter
+            // 
+            this.bemTableAdapter.ClearBeforeFill = true;
+            // 
+            // cliente_BemBindingSource
+            // 
+            this.cliente_BemBindingSource.DataMember = "Cliente_Bem";
+            this.cliente_BemBindingSource.DataSource = this.dataSet;
+            // 
+            // cliente_BemTableAdapter
+            // 
+            this.cliente_BemTableAdapter.ClearBeforeFill = true;
             // 
             // FrmCadastroCliente
             // 
@@ -467,9 +555,12 @@
             this.Controls.Add(this.lblDadosPessoais);
             this.Controls.Add(this.pnlDadosPessoais);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmCadastroCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastro de Cliente";
+            this.Load += new System.EventHandler(this.FrmCadastroCliente_Load);
             this.Shown += new System.EventHandler(this.FrmCadastroCliente_Shown);
             this.pnlDadosPessoais.ResumeLayout(false);
             this.pnlDadosPessoais.PerformLayout();
@@ -477,6 +568,10 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cliente_BemBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -519,5 +614,15 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAttBemSegurado;
         private System.Windows.Forms.Button btnDeleteBemSegurado;
+        private System.Windows.Forms.Label lblDtaVigencia;
+        private System.Windows.Forms.DateTimePicker dtpDtaVigencia;
+        private DataSet dataSet;
+        private System.Windows.Forms.BindingSource clienteBindingSource;
+        private DataSetTableAdapters.ClienteTableAdapter clienteTableAdapter;
+        private DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private DataSetTableAdapters.BemTableAdapter bemTableAdapter;
+        private System.Windows.Forms.BindingSource bemBindingSource;
+        private DataSetTableAdapters.Cliente_BemTableAdapter cliente_BemTableAdapter;
+        private System.Windows.Forms.BindingSource cliente_BemBindingSource;
     }
 }
